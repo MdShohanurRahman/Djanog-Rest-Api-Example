@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .models import *
 from .serializers import *
 
@@ -11,7 +11,6 @@ class LanguageView(viewsets.ModelViewSet):
 class ParadigmView(viewsets.ModelViewSet):
     queryset = Paradigm.objects.all()
     serializer_class = ParadigmSerializer
-
 
 class ProgrammerView(viewsets.ModelViewSet):
     queryset = Programmer.objects.all()
